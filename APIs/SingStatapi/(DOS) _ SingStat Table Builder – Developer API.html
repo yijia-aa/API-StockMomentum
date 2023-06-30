@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://tablebuilder.singstat.gov.sg/view-api/for-developers -->
+<html lang="en" class="hydrated"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="icon" href="https://tablebuilder.singstat.gov.sg/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"><meta name="theme-color" content="#000000"><link rel="apple-touch-icon" href="https://tablebuilder.singstat.gov.sg/logos/apple-touch-icon-(002)-192x192px.png"><link rel="manifest" href="https://tablebuilder.singstat.gov.sg/manifest.json"><link href="./(DOS) _ SingStat Table Builder – Developer API_files/main.6e1b188b.chunk.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="./(DOS) _ SingStat Table Builder – Developer API_files/24.bc27f834.chunk.css"><script async="" src="./(DOS) _ SingStat Table Builder – Developer API_files/sp.js"></script><script charset="utf-8" src="./(DOS) _ SingStat Table Builder – Developer API_files/24.512bfd5d.chunk.js"></script><style data-styled="active" data-styled-version="5.3.0"></style><title>(DOS) | SingStat Table Builder – Developer API</title><meta property="og:image" content="https://tablebuilder.singstat.gov.sg/logos/logo.png" data-react-helmet="true"><meta property="og:type" content="website" data-react-helmet="true"><script src="./(DOS) _ SingStat Table Builder – Developer API_files/wogaa.js" async="true" data-react-helmet="true"></script><script async="true" src="./(DOS) _ SingStat Table Builder – Developer API_files/js" data-react-helmet="true"></script><script async="" src="./(DOS) _ SingStat Table Builder – Developer API_files/wogaa(1).js"></script><script type="module" src="./(DOS) _ SingStat Table Builder – Developer API_files/sentiments.esm.js" async=""></script><script nomodule="" src="./(DOS) _ SingStat Table Builder – Developer API_files/sentiments.js" async=""></script><style data-styled="" data-styled-version="4.4.1"></style><style type="text/css">.transform-component-module_wrapper__7HFJe {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+.transform-component-module_content__uCDPE {
+  display: flex;
+  flex-wrap: wrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform-origin: 0% 0%;
+}
+.transform-component-module_content__uCDPE img {
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.webchat-MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.webchat-MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.webchat-MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.webchat-MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.webchat-MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.webchat-MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.webchat-MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.webchat-MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.webchat-MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiDialog">
+@media print {
+  .webchat-MuiDialog-root {
+    position: absolute !important;
+  }
+}
+.webchat-MuiDialog-scrollPaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.webchat-MuiDialog-scrollBody {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.webchat-MuiDialog-scrollBody:after {
+  width: 0;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.webchat-MuiDialog-container {
+  height: 100%;
+  outline: 0;
+}
+@media print {
+  .webchat-MuiDialog-container {
+    height: auto;
+  }
+}
+.webchat-MuiDialog-paper {
+  margin: 32px;
+  position: relative;
+  overflow-y: auto;
+}
+@media print {
+  .webchat-MuiDialog-paper {
+    box-shadow: none;
+    overflow-y: visible;
+  }
+}
+.webchat-MuiDialog-paperScrollPaper {
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+}
+.webchat-MuiDialog-paperScrollBody {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.webchat-MuiDialog-paperWidthFalse {
+  max-width: calc(100% - 64px);
+}
+.webchat-MuiDialog-paperWidthXs {
+  max-width: 444px;
+}
+@media (max-width:507.95px) {
+  .webchat-MuiDialog-paperWidthXs.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthSm {
+  max-width: 600px;
+}
+@media (max-width:663.95px) {
+  .webchat-MuiDialog-paperWidthSm.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthMd {
+  max-width: 960px;
+}
+@media (max-width:1023.95px) {
+  .webchat-MuiDialog-paperWidthMd.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthLg {
+  max-width: 1280px;
+}
+@media (max-width:1343.95px) {
+  .webchat-MuiDialog-paperWidthLg.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthXl {
+  max-width: 1920px;
+}
+@media (max-width:1983.95px) {
+  .webchat-MuiDialog-paperWidthXl.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperFullWidth {
+  width: calc(100% - 64px);
+}
+.webchat-MuiDialog-paperFullScreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  max-height: none;
+  border-radius: 0;
+}
+.webchat-MuiDialog-paperFullScreen.webchat-MuiDialog-paperScrollBody {
+  margin: 0;
+  max-width: 100%;
+}
+</style><style data-jss="" data-meta="MuiDialog">
+@media print {
+  .webchat-MuiDialog-root {
+    position: absolute !important;
+  }
+}
+.webchat-MuiDialog-scrollPaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.webchat-MuiDialog-scrollBody {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.webchat-MuiDialog-scrollBody:after {
+  width: 0;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.webchat-MuiDialog-container {
+  height: 100%;
+  outline: 0;
+}
+@media print {
+  .webchat-MuiDialog-container {
+    height: auto;
+  }
+}
+.webchat-MuiDialog-paper {
+  margin: 32px;
+  position: relative;
+  overflow-y: auto;
+}
+@media print {
+  .webchat-MuiDialog-paper {
+    box-shadow: none;
+    overflow-y: visible;
+  }
+}
+.webchat-MuiDialog-paperScrollPaper {
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+}
+.webchat-MuiDialog-paperScrollBody {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.webchat-MuiDialog-paperWidthFalse {
+  max-width: calc(100% - 64px);
+}
+.webchat-MuiDialog-paperWidthXs {
+  max-width: 444px;
+}
+@media (max-width:507.95px) {
+  .webchat-MuiDialog-paperWidthXs.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthSm {
+  max-width: 600px;
+}
+@media (max-width:663.95px) {
+  .webchat-MuiDialog-paperWidthSm.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthMd {
+  max-width: 960px;
+}
+@media (max-width:1023.95px) {
+  .webchat-MuiDialog-paperWidthMd.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthLg {
+  max-width: 1280px;
+}
+@media (max-width:1343.95px) {
+  .webchat-MuiDialog-paperWidthLg.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperWidthXl {
+  max-width: 1920px;
+}
+@media (max-width:1983.95px) {
+  .webchat-MuiDialog-paperWidthXl.webchat-MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.webchat-MuiDialog-paperFullWidth {
+  width: calc(100% - 64px);
+}
+.webchat-MuiDialog-paperFullScreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  max-height: none;
+  border-radius: 0;
+}
+.webchat-MuiDialog-paperFullScreen.webchat-MuiDialog-paperScrollBody {
+  margin: 0;
+  max-width: 100%;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.webchat-jss1 {
+  top: 70px !important;
+}
+.webchat-jss1 .webchat-MuiDialog-container {
+  align-items: flex-start;
+}
+.webchat-jss1 .webchat-MuiDialog-paper {
+  width: 100%;
+  margin: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 27.9717px 27.9717px;
+}
+.webchat-jss1 .webchat-MuiBackdrop-root {
+  opacity: 0.9 !important;
+  position: absolute;
+  background: #C4C4C4;
+}
+.webchat-jss2 .webchat-MuiRating-iconEmpty {
+  all: revert;
+}
+.webchat-jss2 .webchat-MuiRating-iconFilled {
+  all: revert;
+}
+.webchat-jss2 .webchat-MuiRating-iconHover {
+  all: revert;
+}
+.webchat-jss2 .webchat-MuiRating-iconFocus {
+  all: revert;
+}
+.webchat-jss2 .webchat-MuiRating-label {
+  all: revert;
+}
+.webchat-jss2 .webchat-MuiRating-icon {
+  cursor: pointer;
+}
+.webchat-jss3 .webchat-MuiCheckbox-root {
+  padding: 0 9px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.webchat-jss4 {
+  top: 70px !important;
+}
+.webchat-jss4 .webchat-MuiDialog-container {
+  align-items: flex-start;
+}
+.webchat-jss4 .webchat-MuiDialog-paper {
+  width: 480px;
+  margin: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 27.9717px 27.9717px;
+}
+.webchat-jss4 .webchat-MuiBackdrop-root {
+  opacity: 0.9 !important;
+  position: absolute;
+  background: #C4C4C4;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.webchat-jss15 {
+  position: fixed;
+}
+.webchat-jss16 {
+  padding: 8px 24px 24px 24px;
+  justify-content: center;
+}
+.webchat-jss17 {
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 0;
+  background-color: rgb(0, 0, 0, 0.9);
+}
+.webchat-jss17:hover {
+  background-color: rgb(0, 0, 0, 0.9);
+}
+.webchat-jss18 {
+  position: absolute;
+  background: #C4C4C4;
+}
+</style><style data-jss="" data-meta="makeStyles">
+</style><style data-jss="" data-meta="makeStyles">
+.webchat-jss5 {
+  padding-bottom: 16px;
+}
+.webchat-jss6 {
+  padding-bottom: 8px;
+}
+.webchat-jss7 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.webchat-jss8 {
+  font-weight: bold;
+}
+.webchat-jss9 {
+  padding: 8px;
+  text-align: center;
+}
+.webchat-jss10 {
+  color: rgba(0,0,0,.8);
+}
+.webchat-jss11 {
+  color: #FFF;
+}
+</style><style data-jss="" data-meta="makeStyles">
+</style><link rel="stylesheet" type="text/css" href="./(DOS) _ SingStat Table Builder – Developer API_files/27.fa6ef510.chunk.css"><script charset="utf-8" src="./(DOS) _ SingStat Table Builder – Developer API_files/27.2d3989c7.chunk.js"></script><style data-emotion="css" data-s=""></style><meta name="description" content="Use the APIs in JSON format for queries on all data tables in the SingStat Table Builder, customise the API response to user-specified requirements and click “Try the API” to test it out." data-react-helmet="true"><meta property="og:url" content="https://tablebuilder.singstat.gov.sg/view-api/for-developers" data-react-helmet="true"><meta property="og:title" content="(DOS) | SingStat Table Builder – Developer API" data-react-helmet="true"><meta property="og:description" content="Use the APIs in JSON format for queries on all data tables in the SingStat Table Builder, customise the API response to user-specified requirements and click “Try the API” to test it out." data-react-helmet="true"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div><div class="sc-kYPZxB kZgSIK c-layout"><div class="sc-dWBRfb iWqacH masthead-container has-background-white"><div class="c-header"><div class="sc-gGLxEB dGJRan c-masthead sgds-masthead"><div class="sgds-container is-fluid"><a href="https://www.gov.sg/" class="sgds-masthead-link"><span class="sgds-icon sgds-icon-sg-crest"></span><span class="sc-ckTSus kVjkXt is-text">A Singapore Government Agency Website</span></a><span class="sc-fbIWvP jREztg is-text"><span class="sc-FRrlG cIjgB">How to identify</span><span class="sgds-icon sgds-icon-chevron-down "></span></span></div></div><div class="sc-kHWWYL zRuTu c-navigation"><nav class="sgds-navbar" role="navigation"><div class="sgds-navbar-brand"><a href="https://www.singstat.gov.sg/" target="_blank" rel="noopener noreferrer" class="sc-bTDOke dXiuJH"><img src="./(DOS) _ SingStat Table Builder – Developer API_files/logo.png" alt="SingStat"></a><div class="sc-daBunf eQUdeu"><span class="contextual-help-download"><button class="sc-dsXzNU iNWOJK sgds-button is-white" aria-label="Add to Download" type="button"><span class="sc-hKFxyN kksiKu icon-add-to-download"></span></button></span><span class="contextual-help-saved-tables"><button class="sc-dsXzNU iNWOJK sgds-button is-white" aria-label="Account" type="button"><span class="sc-dlnjwi dJXsSm icon-account"></span></button></span><button aria-label="Navbar toggle" class="sc-dsXzNU iNWOJK sgds-button is-white" type="button"><span class="sc-gKAaRy hydYaP icon-bars"></span></button></div></div><div id="mainnav-1" class="sgds-navbar-menu"><div class="sgds-navbar-end"><a class="sgds-navbar-item is-tab" href="https://tablebuilder.singstat.gov.sg/">SingStat Table Builder</a><a class="sgds-navbar-item is-tab" href="https://tablebuilder.singstat.gov.sg/latest-updates">Latest Updates</a><div class="sgds-navbar-item has-dropdown is-hoverable"><button class="sc-fcmMJX bRzrLL sgds-navbar-link">APIs <span class="sgds-icon sgds-icon-chevron-down"></span></button></div><a class="sgds-navbar-item is-tab" href="https://tablebuilder.singstat.gov.sg/glossary">Glossary</a><div class="sgds-navbar-item is-hidden-touch is-paddingless"><div class="sc-hOPeYd eXirsP"><span class="contextual-help-download"><button class="sc-dsXzNU iNWOJK sgds-button is-white" aria-label="Add to Download" type="button"><span class="sc-hKFxyN kksiKu icon-add-to-download"></span></button></span><span class="contextual-help-saved-tables"><button class="sc-dsXzNU iNWOJK sgds-button is-white" aria-label="Account" type="button"><span class="sc-dlnjwi dJXsSm icon-account"></span></button></span></div></div></div></div></nav></div></div></div><div class="sc-xGAEC epobNu sgds-section" style="background-position: 0px -8px; margin-top: 0px;"><div class="sc-jHcXXw ehpHJJ"><h3 class="sc-hYRTwp iRaesw c-page-title">Developer API</h3><p>Retrieve complete or partial data in JSON format according to your own parameters.</p><div class="sc-cGKJhA fTwFWY c-tabs"><div data-reach-tabs="" data-orientation="horizontal"><div role="tablist" aria-orientation="horizontal" data-reach-tab-list=""><button aria-controls="tabs--1--panel--0" aria-selected="true" role="tab" tabindex="0" data-reach-tab="" data-orientation="horizontal" id="tabs--1--tab--0" type="button" data-selected="">Search ResourceID</button><button aria-controls="tabs--1--panel--1" aria-selected="false" role="tab" tabindex="-1" data-reach-tab="" data-orientation="horizontal" id="tabs--1--tab--1" type="button">Retrieve Metadata</button><button aria-controls="tabs--1--panel--2" aria-selected="false" role="tab" tabindex="-1" data-reach-tab="" data-orientation="horizontal" id="tabs--1--tab--2" type="button">Retrieve Data</button></div><div data-reach-tab-panels=""><div aria-labelledby="tabs--1--tab--0" role="tabpanel" tabindex="0" data-reach-tab-panel="" id="tabs--1--panel--0"><h3 class="sc-ecQkzk vPeNx">API to Search ResourceID</h3><pre class="sc-gGGFjW gAApEQ">tablebuilder.singstat.gov.sg/api/table/resourceid</pre><p class="sc-dksuTV zPuL">This calls the API using HTTPS GET.</p><button class="sc-JsfZP kBcPwt sgds-button is-outlined is-primary">Try the API</button><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Usage and SDK Samples</h4><div style="width: 200px;"><div class="sc-gkCoMD enpFfZ field"><div class="sc-eXuyPJ kTTKRj control"><div class=" css-2b097c-container"><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class=" css-1c2sewp"><div class=" css-1hwfws3"><div class=" css-1qr4c86-singleValue">JavaScript</div><input id="react-select-2-input" readonly="" tabindex="0" aria-autocomplete="list" aria-label="Choose a programming language" class="css-62g3xt-dummyInput" value=""></div><div class=" css-1wy0on6"><span class=" css-0"></span><div class=" css-114agzo-indicatorContainer" aria-hidden="true"><span class="sc-pNWdM XJxhY sc-kTCsyW gxdqsh icon-caret-down"></span></div></div></div></div></div></div></div><br><pre class="sc-gGGFjW gAApEQ">$(document).ready(function() {
+  $.ajax({
+      type: "GET",
+      dataType: "json",
+      url: "https://tablebuilder.singstat.gov.sg/api/table/resourceid?keyword=retail&amp;searchOption=all",
+      cache: false,
+      success: function(data) {
+        console.log(data);
+      }
+  });
+});</pre></div><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Parameters</h4><div style="height: 10px;"></div><p class="sc-jhGUec eGyFMq">Query parameters</p><div style="overflow: auto;"><table class="sc-hkoqWr jwZvNA"><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody><tr><td>keyword<sup class="required">*</sup><br><i class="required">*required</i></td><td><pre>String</pre><br>Keyword to be searched.</td></tr><tr><td>searchOption<sup class="required">*</sup><br><i class="required">*required</i></td><td><pre>Option include “all”, “title” or “variable”.</pre><br>To search keyword within “All”, “Title” or “Variable.</td></tr></tbody></table></div></div><div style="height: 20px;"></div><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Responses</h4><p style="font-size: 15px;">Status: 200 - get resourceID</p><pre class="sc-gGGFjW gAApEQ">{
+  Data: {
+    generatedBy:      string
+    dateGenerated:    string
+    total:            integer
+    records: [
+      {
+        id:           string
+        tableType:    string
+        title:        string
+      }
+    ]
+  },
+  DataCount:          integer
+  StatusCode:         integer
+  Message:            string
+}</pre></div></div><div aria-labelledby="tabs--1--tab--1" role="tabpanel" tabindex="-1" data-reach-tab-panel="" id="tabs--1--panel--1" hidden=""><h3 class="sc-ecQkzk vPeNx">API to Retrieve Metadata</h3><pre class="sc-gGGFjW gAApEQ">tablebuilder.singstat.gov.sg/api/table/metadata/{resourceId}</pre><p class="sc-dksuTV zPuL">This calls the API using HTTPS GET.</p><button class="sc-JsfZP kBcPwt sgds-button is-outlined is-primary">Try the API</button><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Usage and SDK Samples</h4><div style="width: 200px;"><div class="sc-gkCoMD enpFfZ field"><div class="sc-eXuyPJ kTTKRj control"><div class=" css-2b097c-container"><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class=" css-1c2sewp"><div class=" css-1hwfws3"><div class=" css-1qr4c86-singleValue">JavaScript</div><input id="react-select-3-input" readonly="" tabindex="0" aria-autocomplete="list" aria-label="Choose a programming language" class="css-62g3xt-dummyInput" value=""></div><div class=" css-1wy0on6"><span class=" css-0"></span><div class=" css-114agzo-indicatorContainer" aria-hidden="true"><span class="sc-pNWdM XJxhY sc-kTCsyW gxdqsh icon-caret-down"></span></div></div></div></div></div></div></div><br><pre class="sc-gGGFjW gAApEQ">var resourceId = 'M015171';
+$(document).ready(function() {
+  $.ajax({
+      type: "GET",
+      dataType: "json",
+      url: "https://tablebuilder.singstat.gov.sg/api/table/metadata/"+resourceId,
+      cache: false,
+      success: function(data) {
+        console.log(data);
+      }
+  });
+});</pre></div><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Parameters</h4><div style="height: 10px;"></div><p class="sc-jhGUec eGyFMq">Path parameters</p><div style="overflow: auto;"><table class="sc-hkoqWr jwZvNA"><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody><tr><td>resourceId<sup class="required">*</sup><br><i class="required">*required</i></td><td><pre>String</pre><br>ID of the resource.</td></tr></tbody></table></div></div><div style="height: 20px;"></div><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Responses</h4><p style="font-size: 15px;">Status: 200 - get metadata</p><div style="width: 200px;"><div class="sc-gkCoMD enpFfZ field"><div class="sc-eXuyPJ kTTKRj control"><div class=" css-2b097c-container"><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class=" css-1c2sewp"><div class=" css-1hwfws3"><div class=" css-1qr4c86-singleValue">Timeseries</div><input id="react-select-4-input" readonly="" tabindex="0" aria-autocomplete="list" aria-label="Choose a table type" class="css-62g3xt-dummyInput" value=""></div><div class=" css-1wy0on6"><span class=" css-0"></span><div class=" css-114agzo-indicatorContainer" aria-hidden="true"><span class="sc-pNWdM XJxhY sc-kTCsyW gxdqsh icon-caret-down"></span></div></div></div></div></div></div></div><br><pre class="sc-gGGFjW gAApEQ">{
+  Data: {
+    generatedBy:        string
+    dateGenerated:      string
+    records: {
+      id:               string
+      title:            string
+      frequency:        string
+      dataSource:       string
+      footnote:         string
+      dataLastUpdated:  string
+      startPeriod:      string
+      endPeriod:        string
+      total:            integer
+      row: [
+        {
+          seriesNo:     string
+          rowText:      string
+          uom:          string
+          footnote:     string
+        },
+      ]
+    }
+  },
+  DataCount:            integer
+  StatusCode:           integer
+  Message:              string
+}</pre></div></div><div aria-labelledby="tabs--1--tab--2" role="tabpanel" tabindex="-1" data-reach-tab-panel="" id="tabs--1--panel--2" hidden=""><h3 class="sc-ecQkzk vPeNx">API to Retrieve Table Data</h3><pre class="sc-gGGFjW gAApEQ">tablebuilder.singstat.gov.sg/api/table/tabledata/{resourceId}</pre><p class="sc-dksuTV zPuL">This calls the API using HTTPS GET.</p><button class="sc-JsfZP kBcPwt sgds-button is-outlined is-primary">Try the API</button><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Usage and SDK Samples</h4><div style="width: 200px;"><div class="sc-gkCoMD enpFfZ field"><div class="sc-eXuyPJ kTTKRj control"><div class=" css-2b097c-container"><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class=" css-1c2sewp"><div class=" css-1hwfws3"><div class=" css-1qr4c86-singleValue">JavaScript</div><input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" aria-label="Choose a programming language" class="css-62g3xt-dummyInput" value=""></div><div class=" css-1wy0on6"><span class=" css-0"></span><div class=" css-114agzo-indicatorContainer" aria-hidden="true"><span class="sc-pNWdM XJxhY sc-kTCsyW gxdqsh icon-caret-down"></span></div></div></div></div></div></div></div><br><pre class="sc-gGGFjW gAApEQ">var resourceId      = 'M250141';
+var seriesNoValue    = 13.1;
+var offsetValue      = 1;
+var limitValue       = 5;
+var sortByValue      = 'value asc'
+var timeFilterValue  = '2013';
+var searchValue      = 'land';                                                
+$(document).ready(function() {
+  $.ajax({
+      type: "GET",
+      dataType: "json",
+      url: "https://tablebuilder.singstat.gov.sg/api/table/tabledata/"+resourceId+"?seriesNoORrowNo="+seriesNoValue+"&amp;offset="+offsetValue+"&amp;limit="+limitValue+"&amp;sortBy="+sortByValue+"&amp;timeFilter="+timeFilterValue+"&amp;search="+searchValue,
+      cache: false,
+      success: function(data) {
+        console.log(data);
+      }
+  });
+});</pre></div><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Parameters</h4><div style="height: 10px;"></div><p class="sc-jhGUec eGyFMq">Path parameters</p><div style="overflow: auto;"><table class="sc-hkoqWr jwZvNA"><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody><tr><td>resourceId<sup class="required">*</sup><br><i class="required">*required</i></td><td><pre>String</pre><br>ID of the resource to be searched.</td></tr></tbody></table></div><div style="height: 30px;"></div><p class="sc-jhGUec eGyFMq">Query parameters</p><div style="overflow: auto;"><table class="sc-hkoqWr jwZvNA"><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody><tr><td>seriesNoORrowNo</td><td><pre>String</pre><br>seriesNo for Time Series Table and rowNo for Cross Sectional Table.</td></tr><tr><td>offset</td><td><pre>Number</pre><br>Specify the first n number of records to be excluded in the returned result.</td></tr><tr><td>limit</td><td><pre>Number</pre><br>Specify the number (maximum = 2000) of records to be included in the returned results for Time Series Table or number of rows to be included in the returned results for Cross Sectional Table.</td></tr><tr><td>sortBy</td><td><pre>Option include key asc, key desc, value asc, value desc, seriesno asc, seriesno desc, rowno asc, rowno desc, rowtext asc, rowtext desc</pre><br>Sort the returned records in descending or ascending order by the following fields: time, level, value, rowText, seriesNo, rowNo.<br><br>Not applicable for Cross Sectional tables</td></tr><tr><td>timeFilter</td><td><pre>String</pre><br>Return records of specific time points based on the type of selected table (monthly, half-yearly, quarterly, annual). There should be no spacing between commas. Example: For the quarterly table, timeFilter=2017 4Q,2018 1Q For the annual table, timeFilter=2017,2018 For the monthly table, timeFilter=2018 Mar For the half yearly table, timeFilter=2018 H1.<br><br>Not applicable for Cross Sectional tables</td></tr><tr><td>between</td><td><pre>String</pre><br>Specify a range within which the data values are to be filtered to give the returned result. The start and end points of the range are to be included. There should be no spacing between the values and commas.</td></tr><tr><td>search</td><td><pre>String</pre><br>Return records that contain the search string.</td></tr></tbody></table></div></div><div style="height: 20px;"></div><div class="sc-bShgHC aBwtF"><h4 class="sc-juXuNZ KigMW">Responses</h4><p style="font-size: 15px;">Status: 200 - get tabledata</p><div style="width: 200px;"><div class="sc-gkCoMD enpFfZ field"><div class="sc-eXuyPJ kTTKRj control"><div class=" css-2b097c-container"><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class=" css-1c2sewp"><div class=" css-1hwfws3"><div class=" css-1qr4c86-singleValue">Timeseries</div><input id="react-select-6-input" readonly="" tabindex="0" aria-autocomplete="list" aria-label="Choose a table type" class="css-62g3xt-dummyInput" value=""></div><div class=" css-1wy0on6"><span class=" css-0"></span><div class=" css-114agzo-indicatorContainer" aria-hidden="true"><span class="sc-pNWdM XJxhY sc-kTCsyW gxdqsh icon-caret-down"></span></div></div></div></div></div></div></div><br><pre class="sc-gGGFjW gAApEQ">{
+  Data: {
+    id:                 string
+    title:              string
+    footnote:           string
+    frequency:          string
+    datasource:         string
+    generatedBy:        string
+    dataLastUpdated:    string
+    dateGenerated:      string
+    offset:             string
+    limit:              string
+    sortBy:             string
+    timeFilter:         string
+    between:            string
+    search:             string
+    row: [
+      {
+        seriesNo:       string
+        rowText:        string
+        uom:            string
+        footnote:       string
+        columns:        [
+          {
+            key:         string
+            value:       string
+          }
+        ]
+      },
+    ]
+  },
+  DataCount:            integer
+  StatusCode:           integer
+  Message:              string
+}</pre></div></div></div></div></div><div class="c-contextual-help"></div></div></div><footer class="c-footer sgds-footer" data-v-d05d3463=""><div class="top-section" data-v-d05d3463=""><div class="row" data-v-d05d3463=""><div class="col" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-bsatvv gHEtUc"><b data-v-d05d3463="">SingStat Table Builder<span style="font-size: 0.5em; padding-left: 3px; vertical-align: text-bottom;"></span></b></p></div></div><div class="row" data-v-d05d3463=""><div class="col is-7" data-v-d05d3463=""><ul data-v-d05d3463=""><li class="is-inline-block-desktop-only li-mobile" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a aria-current="page" class="active" data-v-d05d3463="" href="https://tablebuilder.singstat.gov.sg/">SingStat Table Builder</a></p></li><li class="is-inline-block-desktop-only li-mobile" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a data-v-d05d3463="" href="https://tablebuilder.singstat.gov.sg/latest-updates">Latest Updates</a></p></li><li class="is-inline-block-desktop-only li-mobile" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a data-v-d05d3463="" href="https://tablebuilder.singstat.gov.sg/view-api/find-apis">Data API</a></p></li><li class="is-inline-block-desktop-only li-mobile" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a aria-current="page" class="active" data-v-d05d3463="" href="https://tablebuilder.singstat.gov.sg/view-api/for-developers">Developer API</a></p></li><li class="is-inline-block-desktop-only li-mobile" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a data-v-d05d3463="" href="https://tablebuilder.singstat.gov.sg/glossary">Glossary</a></p></li><li class="is-inline-block-desktop-only li-mobile" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><button type="button" class="sc-Arkif eSiFxs sc-jNnpgg jIfccS sc-eGJWMs gQYBcx"><span class="sc-jcwpoC kyvWZW icon-video"></span> Introductory Video</button></p></li></ul></div><div class="col is-right-desktop-only right-ft-menu-mobile" data-v-d05d3463=""><ul data-v-d05d3463=""><li class="is-inline-block-desktop-only" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a class="c-link " href="https://www.singstat.gov.sg/contact-us" target="_blank" rel="noopener noreferrer">Contact Us <span class="sc-bkbkJK eraKfR icon-external"></span></a></p></li><li class="is-inline-block-desktop-only" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a class="c-link " href="https://form.gov.sg/#!/607fe66219b0990011761be3" target="_blank" rel="noopener noreferrer">Feedback <span class="sc-bkbkJK eraKfR icon-external"></span></a></p></li><li class="is-inline-block-desktop-only" data-v-d05d3463=""><p data-v-d05d3463="" class="sc-dFRpbK bFgzLZ"><a class="c-link " href="https://tablebuilder.singstat.gov.sg/faq" target="_self">FAQs</a></p></li><li data-v-d05d3463=""><a href="https://t.me/SingStat" aria-label="Telegram" data-v-d05d3463="" rel="noopener noreferrer" target="_blank" class="sc-csTbgd kglWtV"><span data-v-d05d3463="" class="sc-gIvpjk gKlihs"></span></a><a href="https://www.youtube.com/channel/UCD2gcOTKMYS62FBx95yrevg" aria-label="YouTube" data-v-d05d3463="" rel="noopener noreferrer" target="_blank" class="sc-csTbgd kglWtV"><span data-v-d05d3463="" class="sc-iBzEeX glZmJR icon-youtube"></span></a><a href="https://sg.linkedin.com/company/sg-department-of-statistics" aria-label="LinkedIn" data-v-d05d3463="" rel="noopener noreferrer" target="_blank" class="sc-csTbgd kglWtV"><span data-v-d05d3463="" class="sc-fKgJPI cxbltl icon-linkedin"></span></a></li></ul></div></div><p class="has-text-white" data-v-d05d3463="">Best viewed using Google Chrome 91, Microsoft Edge 91, Mozilla Firefox 88 and Safari 12</p></div><div class="bottom-section" data-v-d05d3463=""><div class="sgds-container is-fluid" data-v-d05d3463=""><div class="row is-multiline" data-v-d05d3463=""><div class="col is-12" data-v-d05d3463=""><ul data-v-d05d3463=""><li data-v-d05d3463=""><a class="c-link " href="https://tech.gov.sg/report_vulnerability" target="_blank" rel="noopener noreferrer">Report Vulnerability <span class="sc-bkbkJK eraKfR icon-external"></span></a></li><li data-v-d05d3463=""><a class="c-link " href="https://www.reach.gov.sg/" target="_blank" rel="noopener noreferrer">REACH <span class="sc-bkbkJK eraKfR icon-external"></span></a></li><li data-v-d05d3463=""><a class="c-link " href="http://www.singstat.gov.sg/privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Statement <span class="sc-bkbkJK eraKfR icon-external"></span></a></li><li data-v-d05d3463=""><a class="c-link " href="http://www.singstat.gov.sg/terms-of-use" target="_blank" rel="noopener noreferrer">Terms of Use <span class="sc-bkbkJK eraKfR icon-external"></span></a></li><li data-v-d05d3463=""><a class="c-link " href="https://data.gov.sg/privacy-and-website-terms#api-terms" target="_blank" rel="noopener noreferrer">API Terms of Service <span class="sc-bkbkJK eraKfR icon-external"></span></a></li></ul></div><div class="col is-12 has-text-right-desktop has-text-right-tablet has-text-left-mobile" data-v-d05d3463=""><p class="last-updated" data-v-d05d3463="">© 2023 Government of Singapore<br data-v-d05d3463=""><span data-v-d05d3463="">Last Updated: 21 Mar 2022</span></p></div></div></div></div></footer></div><div id="webchat" app-id="dos-ask-singstat" app-name="Ask SingStat" app-color="#0C2D80" app-icon="https://www.singstat.gov.sg/-/media/images/VICA/avatar" app-base-font-size="16" app-auto-launch="false" app-foreground-color1="white" app-background-color2="white" app-foreground-color-2="#2e2e2e" app-canvas-background-color="#F2F2F2" app-button-border-color="#E0E0E0" app-quick-reply-button-background-color="#fafdfd" app-font-family="Lato" app-quick-launch-event="welcome_STB" app-bot-response-trigger-event="true" app-enable-auto-complete="true" app-auto-complete-background-color="#D1D4DC" app-auto-complete-divider-color="#002395" app-auto-complete-hover-color="#C1C8D7" app-enable-recommendations="false" app-position-right="5" app-position-bottom="8"><div id="webchat-container"><div class="sc-bdVaJa dKQgcy"><div class="sc-bwzfXH cRwaRu"><img alt="Bot Launcher" src="./(DOS) _ SingStat Table Builder – Developer API_files/avatar.png" class="sc-htpNat iUqtne"></div></div><div hidden="" class="sc-bZQynM jTHORo"><div class="sc-gzVnrw iYOdXe"><div class="sc-chPdSV fAEdeS"><div class="sc-jKJlTe jtNtPH"><img alt="Bot Avatar" src="./(DOS) _ SingStat Table Builder – Developer API_files/avatar.png" class="sc-eNQAEJ bszQGT"></div><div class="sc-kgoBCf iOrRRv"><div><p class="sc-kGXeez jzFxsa">Ask SingStat<sup class="sc-dxgOiQ fIKqOO"></sup></p></div></div><div class="sc-ckVGcZ hBbIjV"><svg class="webchat-MuiSvgIcon-root sc-hMqMXs dsimZW webchat-MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19h12v2H6z"></path></svg><svg class="webchat-MuiSvgIcon-root sc-kEYyzF cNiWXq webchat-MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></div></div><div class="sc-htoDjs kUNEcY"><div class="sc-gPWkxV hWOZpi"><div class="sc-fzsDOv bedlvV"></div></div><div></div><div class="sc-fgfRvd fKwkto"><div class="sc-hIVACf iyvwa"><textarea rows="1" placeholder="Type your message here" maxlength="256" class="sc-gpHHfC eNjjnu"></textarea><div class="sc-gVyKpa jJKkGw"><svg class="webchat-MuiSvgIcon-root webchat-MuiSvgIcon-fontSizeSmall" focusable="false" viewBox="0 0 24 24" color="white" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg></div></div></div><div class="sc-eXNvrr fSLSVC"><div class="sc-cpmKsF cpciPx"><div class="sc-cEvuZC cWZcIN"><div class="sc-iQtOjA gSzaPM"><svg class="webchat-MuiSvgIcon-root sc-gPzReC fDupIy" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path></svg></div></div><div class="sc-kXeGPI eFPjsr" style="display: none; position: absolute; top: 0px; left: 0px;">Rate chat</div><div class="sc-iybRtq cucIUL"></div><div class="sc-cEvuZC cWZcIN"><div class="sc-iQtOjA gSzaPM"><svg class="webchat-MuiSvgIcon-root sc-jrIrqw FVblo" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16.5l4-4h-3v-9h-2v9H8l4 4zm9-13h-6v1.99h6v14.03H3V5.49h6V3.5H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2z"></path></svg></div></div><div class="sc-kXeGPI eFPjsr" style="display: none; position: absolute; top: 0px; left: 0px;">Download Transcript</div></div><div class="sc-kQsIoO eGfuLY">POWERED BY GOVTECH</div></div></div></div><div></div></div></div></div><div class="sc-jgPyTC hwScFA c-modal"><section width="1080" class="sc-gSYDnn NaOZd"><h2 class="sc-laZMeE ljWfRO">Notification Subscription</h2><p class="sc-iNiQyp jdiWPe"></p><div class="sc-jffHpj jjTcTs"><div class="sc-oeezt OJJCp"><div class="sc-hhIiOg iwisNA"><ul></ul></div><hr><p>You may also choose to be notified of updates to the related topics:</p><p style="margin-top: 0px; margin-bottom: 10px;"><em>(You can change your preferences from your account settings later)</em></p><div class="sc-eirqVv dSzotL"></div><button type="button" class="sc-jNnpgg sc-dPaNzc sc-bBjRSN jIfccS fLQrhb cdTyhF sc-jNnpgg jIfccS sgds-button is-rounded">Subscribe to notifications</button></div></div></section><button aria-label="close-btn" class="sc-hTRkXV enlJuL"><span class="sc-dIsUp jEEywD icon-close"></span></button></div><div class="sc-jgPyTC hwScFA c-modal"><section width="1080" class="sc-gSYDnn NaOZd"><h2 class="sc-laZMeE ljWfRO">Subscribed to Notifications</h2><p class="sc-iNiQyp jdiWPe"></p><div class="sc-jffHpj jjTcTs"><div class="sc-oeezt OJJCp"><p style="margin-top: 0px; margin-bottom: 10px;">You will receive notifications via email. You can change your preference in your account settings.</p><button type="button" class="sc-jNnpgg sc-dPaNzc sc-bBjRSN jIfccS fLQrhb cdTyhF sc-jNnpgg jIfccS sgds-button is-rounded">View saved tables</button></div></div></section><button aria-label="close-btn" class="sc-hTRkXV enlJuL"><span class="sc-dIsUp jEEywD icon-close"></span></button></div></div></div><script src="./(DOS) _ SingStat Table Builder – Developer API_files/runtime-main.1ac56de8.js"></script><script src="./(DOS) _ SingStat Table Builder – Developer API_files/main.89c67dec.chunk.js"></script><wog-sentiments class="needsclick hydrated"><template shadowrootmode="open"><div id="wog--sentiments-content"><link href="https://assets.wogaa.sg/fonts/stylesheet/3.0.0-657/production/sentiments.css" rel="stylesheet"><wog-floating-action-button class="hydrated"><div class="wog--flex wog--items-center wog--justify-center wog--inline-flex wog--floating-button wog--float-bottom-left" tabindex="0" role="button" aria-label="Help us improve popup"><wog-icon-smiley-face class="hydrated"><div class="wog--feedback-icon wog--icon__show"><svg id="happy-svg" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 70 70"><g><path id="Fill-4" d="M35 54.3c-7.3 0-14.5-2.9-20-8.7-.9-1-.9-2.5 0-3.5s2.4-1 3.3 0c9.2 9.6 24.2 9.7 33.4 0 .9-1 2.4-1 3.3 0 .9 1 .9 2.5 0 3.5-5.5 5.8-12.8 8.7-20 8.7"></path><path id="Fill-6" d="M21.4 32.9c-2.4 0-4.3-1.7-4.3-3.7v-2.5c0-2.1 1.9-3.7 4.3-3.7s4.3 1.7 4.3 3.7v2.5c0 2-1.9 3.7-4.3 3.7"></path><path id="Fill-8" d="M48.6 32.9c-2.4 0-4.3-1.7-4.3-3.7v-2.5c0-2.1 1.9-3.7 4.3-3.7s4.3 1.7 4.3 3.7v2.5c0 2-2 3.7-4.3 3.7"></path></g></svg></div></wog-icon-smiley-face></div></wog-floating-action-button></div></template></wog-sentiments><link href="./(DOS) _ SingStat Table Builder – Developer API_files/chat.css" type="text/css" rel="stylesheet" referrerpolicy="origin"><script src="./(DOS) _ SingStat Table Builder – Developer API_files/chat.js" type="text/javascript" referrerpolicy="origin" defer=""></script></body></html>
